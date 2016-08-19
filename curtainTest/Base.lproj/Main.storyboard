@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="curtainTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="0DV-Ld-auI">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Td3-Xf-PRv">
+                                <rect key="frame" x="244" y="280" width="113" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="presentVC"/>
+                                <connections>
+                                    <action selector="buttonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hHr-dD-cr1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0DV-Ld-auI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7N7-qz-usn"/>
+                            <constraint firstItem="Td3-Xf-PRv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xl1-Od-tip"/>
+                            <constraint firstAttribute="trailing" secondItem="0DV-Ld-auI" secondAttribute="trailing" id="ZTc-Vf-TfH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0DV-Ld-auI" secondAttribute="bottom" id="sbB-w0-ypb"/>
+                            <constraint firstItem="0DV-Ld-auI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="xUF-Ly-fN8"/>
+                            <constraint firstItem="Td3-Xf-PRv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yE3-ZE-vPJ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--View Controller To Present-->
+        <scene sceneID="1OH-bU-ESk">
+            <objects>
+                <viewController storyboardIdentifier="ViewControllerToPresent" id="fDw-fA-sRD" customClass="ViewControllerToPresent" customModule="curtainTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="obc-nC-gLK"/>
+                        <viewControllerLayoutGuide type="bottom" id="v0D-bj-ecf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="efr-c0-rsz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cB-Fh-elq">
+                                <rect key="frame" x="262" y="281" width="77" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.9026761968" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Dismiss"/>
+                                <connections>
+                                    <action selector="dismissButtonAction:" destination="fDw-fA-sRD" eventType="touchUpInside" id="XjA-FT-u43"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="2cB-Fh-elq" firstAttribute="centerY" secondItem="efr-c0-rsz" secondAttribute="centerY" id="2ca-73-CYx"/>
+                            <constraint firstItem="2cB-Fh-elq" firstAttribute="centerX" secondItem="efr-c0-rsz" secondAttribute="centerX" id="OjK-PZ-a7d"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vxS-dq-nYB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1118" y="387"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="image" width="1136" height="642"/>
+    </resources>
+</document>
