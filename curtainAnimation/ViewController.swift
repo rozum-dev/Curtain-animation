@@ -10,25 +10,38 @@ import UIKit
 
 class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     
-    @IBAction func buttonAction(sender: AnyObject) {
+    private var isHorizontally = true
+
+    @IBAction func presentHorizAction(sender: UIButton) {
+        isHorizontally = true
+        presentVC()
+    }
+    
+    @IBAction func presentVerAction(sender: UIButton) {
+        isHorizontally = false
+        presentVC()
+    }
+    
+    func presentVC() {
         let vc = storyboard?.instantiateViewControllerWithIdentifier("ViewControllerToPresent")
         vc!.transitioningDelegate = self
         self.presentViewController(vc!, animated: true) {
             
         }
     }
-
-    // UIViewControllerTransitioningDelegate
     
+    //MARK: UIViewControllerTransitioningDelegate
     func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         let presentAnimCtr = CurtainAnimationController.init()
         presentAnimCtr.isPositiveAnimation = true
+        presentAnimCtr.isHorizontal = isHorizontally
         return presentAnimCtr
     }
     
     func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         let presentAnimCtr = CurtainAnimationController.init()
         presentAnimCtr.isPositiveAnimation = false
+        presentAnimCtr.isHorizontal = isHorizontally
         return presentAnimCtr
     }
     

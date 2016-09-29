@@ -7,25 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21FD93DA1D9D595600C2AEAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21FD93D81D9D595600C2AEAA /* LaunchScreen.storyboard */; };
 		AC6C29991D5A2A580042BC41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6C29981D5A2A580042BC41 /* AppDelegate.swift */; };
 		AC6C299B1D5A2A580042BC41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6C299A1D5A2A580042BC41 /* ViewController.swift */; };
 		AC6C299E1D5A2A580042BC41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC6C299C1D5A2A580042BC41 /* Main.storyboard */; };
 		AC6C29A01D5A2A580042BC41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC6C299F1D5A2A580042BC41 /* Assets.xcassets */; };
-		AC6C29A31D5A2A580042BC41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC6C29A11D5A2A580042BC41 /* LaunchScreen.storyboard */; };
 		AC6C29AB1D5A2B6F0042BC41 /* CurtainAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6C29AA1D5A2B6F0042BC41 /* CurtainAnimationController.swift */; };
 		AC6C29AD1D5A3CD40042BC41 /* ViewControllerToPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6C29AC1D5A3CD40042BC41 /* ViewControllerToPresent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AC6C29951D5A2A580042BC41 /* curtainTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = curtainTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC6C29981D5A2A580042BC41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AC6C299A1D5A2A580042BC41 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		21FD93D91D9D595600C2AEAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = curtainAnimation/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		AC6C29951D5A2A580042BC41 /* curtainAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = curtainAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC6C29981D5A2A580042BC41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../curtainAnimation/AppDelegate.swift; sourceTree = "<group>"; };
+		AC6C299A1D5A2A580042BC41 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../curtainAnimation/ViewController.swift; sourceTree = "<group>"; };
 		AC6C299D1D5A2A580042BC41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AC6C299F1D5A2A580042BC41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AC6C29A21D5A2A580042BC41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		AC6C29A41D5A2A580042BC41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AC6C29AA1D5A2B6F0042BC41 /* CurtainAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurtainAnimationController.swift; sourceTree = "<group>"; };
-		AC6C29AC1D5A3CD40042BC41 /* ViewControllerToPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerToPresent.swift; sourceTree = "<group>"; };
+		AC6C299F1D5A2A580042BC41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../curtainAnimation/Assets.xcassets; sourceTree = "<group>"; };
+		AC6C29A41D5A2A580042BC41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../curtainAnimation/Info.plist; sourceTree = "<group>"; };
+		AC6C29AA1D5A2B6F0042BC41 /* CurtainAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CurtainAnimationController.swift; path = ../curtainAnimation/CurtainAnimationController.swift; sourceTree = "<group>"; };
+		AC6C29AC1D5A3CD40042BC41 /* ViewControllerToPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllerToPresent.swift; path = ../curtainAnimation/ViewControllerToPresent.swift; sourceTree = "<group>"; };
 		D7C3800B81F72DE9CDE4E3C9 /* Pods_curtainTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_curtainTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -51,7 +51,7 @@
 		AC6C298C1D5A2A570042BC41 = {
 			isa = PBXGroup;
 			children = (
-				AC6C29971D5A2A580042BC41 /* curtainTest */,
+				AC6C29971D5A2A580042BC41 /* curtainAnimation */,
 				AC6C29961D5A2A580042BC41 /* Products */,
 				85CE395E99001AC0780B20E4 /* Frameworks */,
 			);
@@ -60,12 +60,12 @@
 		AC6C29961D5A2A580042BC41 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AC6C29951D5A2A580042BC41 /* curtainTest.app */,
+				AC6C29951D5A2A580042BC41 /* curtainAnimation.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AC6C29971D5A2A580042BC41 /* curtainTest */ = {
+		AC6C29971D5A2A580042BC41 /* curtainAnimation */ = {
 			isa = PBXGroup;
 			children = (
 				AC6C29981D5A2A580042BC41 /* AppDelegate.swift */,
@@ -74,18 +74,19 @@
 				AC6C29AA1D5A2B6F0042BC41 /* CurtainAnimationController.swift */,
 				AC6C299C1D5A2A580042BC41 /* Main.storyboard */,
 				AC6C299F1D5A2A580042BC41 /* Assets.xcassets */,
-				AC6C29A11D5A2A580042BC41 /* LaunchScreen.storyboard */,
+				21FD93D81D9D595600C2AEAA /* LaunchScreen.storyboard */,
 				AC6C29A41D5A2A580042BC41 /* Info.plist */,
 			);
+			name = curtainAnimation;
 			path = curtainTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AC6C29941D5A2A580042BC41 /* curtainTest */ = {
+		AC6C29941D5A2A580042BC41 /* curtainAnimation */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AC6C29A71D5A2A580042BC41 /* Build configuration list for PBXNativeTarget "curtainTest" */;
+			buildConfigurationList = AC6C29A71D5A2A580042BC41 /* Build configuration list for PBXNativeTarget "curtainAnimation" */;
 			buildPhases = (
 				AC6C29911D5A2A580042BC41 /* Sources */,
 				AC6C29921D5A2A580042BC41 /* Frameworks */,
@@ -95,9 +96,9 @@
 			);
 			dependencies = (
 			);
-			name = curtainTest;
+			name = curtainAnimation;
 			productName = curtainTest;
-			productReference = AC6C29951D5A2A580042BC41 /* curtainTest.app */;
+			productReference = AC6C29951D5A2A580042BC41 /* curtainAnimation.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -115,7 +116,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AC6C29901D5A2A580042BC41 /* Build configuration list for PBXProject "curtainTest" */;
+			buildConfigurationList = AC6C29901D5A2A580042BC41 /* Build configuration list for PBXProject "curtainAnimation" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -128,7 +129,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AC6C29941D5A2A580042BC41 /* curtainTest */,
+				AC6C29941D5A2A580042BC41 /* curtainAnimation */,
 			);
 		};
 /* End PBXProject section */
@@ -138,7 +139,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC6C29A31D5A2A580042BC41 /* LaunchScreen.storyboard in Resources */,
+				21FD93DA1D9D595600C2AEAA /* LaunchScreen.storyboard in Resources */,
 				AC6C29A01D5A2A580042BC41 /* Assets.xcassets in Resources */,
 				AC6C299E1D5A2A580042BC41 /* Main.storyboard in Resources */,
 			);
@@ -161,20 +162,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		21FD93D81D9D595600C2AEAA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				21FD93D91D9D595600C2AEAA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		AC6C299C1D5A2A580042BC41 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				AC6C299D1D5A2A580042BC41 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		AC6C29A11D5A2A580042BC41 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AC6C29A21D5A2A580042BC41 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
+			path = ../curtainAnimation;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -269,10 +271,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = curtainTest/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/curtainAnimation/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.appload.curtainTest;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = curtainAnimation;
 			};
 			name = Debug;
 		};
@@ -280,17 +282,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = curtainTest/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/curtainAnimation/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.appload.curtainTest;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = curtainAnimation;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AC6C29901D5A2A580042BC41 /* Build configuration list for PBXProject "curtainTest" */ = {
+		AC6C29901D5A2A580042BC41 /* Build configuration list for PBXProject "curtainAnimation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AC6C29A51D5A2A580042BC41 /* Debug */,
@@ -299,7 +301,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AC6C29A71D5A2A580042BC41 /* Build configuration list for PBXNativeTarget "curtainTest" */ = {
+		AC6C29A71D5A2A580042BC41 /* Build configuration list for PBXNativeTarget "curtainAnimation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AC6C29A81D5A2A580042BC41 /* Debug */,

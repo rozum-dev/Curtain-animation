@@ -13,12 +13,8 @@ private let kFadeViewAlpha: CGFloat = 0.3
 
 public class CurtainAnimationController: NSObject, UIViewControllerAnimatedTransitioning {
     
-    public var isPositiveAnimation: Bool
-    
-    override init() {
-        isPositiveAnimation = false
-        super.init()
-    }
+    public var isPositiveAnimation: Bool = false
+    public var isHorizontal: Bool = true
     
     func imageWithView(view: UIView) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(view.bounds.size, view.opaque, 0.0);
@@ -37,26 +33,24 @@ public class CurtainAnimationController: NSObject, UIViewControllerAnimatedTrans
         if (fromView != nil && toView != nil && container != nil) {
             toView!.frame = container!.bounds
             
-            let viewToSnapshot = self.isPositiveAnimation ? fromView! : toView!
+            let viewToSnapshot = isPositiveAnimation ? fromView! : toView!
             
             let snapShotImg = self.imageWithView(viewToSnapshot)
-            let topSnapshotView = UIImageView.init(image: snapShotImg)
-            let bottomSnapshotView = UIImageView.init(image: snapShotImg)
-            topSnapshotView.contentMode = .Top
-            bottomSnapshotView.contentMode = .Bottom
-            topSnapshotView.clipsToBounds = true
-            bottomSnapshotView.clipsToBounds = true
-                        
-//            let topSnapshotView = viewToSnapshot.resizableSnapshotViewFromRect(CGRectMake(0, 0, fromView!.bounds.size.width, fromView!.bounds.size.height / 2), afterScreenUpdates: true, withCapInsets: UIEdgeInsetsZero)
-//            let bottomSnapshotView = viewToSnapshot.resizableSnapshotViewFromRect(CGRectMake(0, fromView!.bounds.size.height / 2, fromView!.bounds.size.width, fromView!.bounds.size.height / 2), afterScreenUpdates: true, withCapInsets: UIEdgeInsetsZero)
+            let firstSnapshotView = UIImageView.init(image: snapShotImg)
+            let secondSnapshotView = UIImageView.init(image: snapShotImg)
+            firstSnapshotView.contentMode = isHorizontal ? .Left : .Top
+            secondSnapshotView.contentMode = isHorizontal ? .Right : .Bottom
+            firstSnapshotView.clipsToBounds = true
+            secondSnapshotView.clipsToBounds = true
             
-            let topYStart = isPositiveAnimation ? 0 : -container!.frame.size.height / 2
-            let topYEnd = isPositiveAnimation ? -container!.frame.size.height / 2 : 0
-            let bottomYStart = isPositiveAnimation ? container!.frame.size.height / 2 : container!.frame.size.height
-            let bottomYEnd = isPositiveAnimation ? container!.frame.size.height : container!.frame.size.height / 2
+            let firstSnapshotViewFrameStart = isHorizontal ? CGRectMake(0.0, 0.0, container!.frame.size.width / 2, container!.frame.size.height) : CGRectMake(0.0, 0.0, container!.frame.size.width, container!.frame.size.height / 2)
+            let firstSnapshotViewFrameEnd = isHorizontal ? CGRectMake(-container!.frame.size.width / 2, 0.0, container!.frame.size.width / 2, container!.frame.size.height) : CGRectMake(0.0, -container!.frame.size.height / 2, container!.frame.size.width, container!.frame.size.height / 2)
             
-            topSnapshotView.frame = CGRectMake(container!.frame.origin.x, topYStart, container!.frame.size.width, container!.frame.size.height / 2)
-            bottomSnapshotView.frame = CGRectMake(container!.frame.origin.x, bottomYStart, container!.frame.size.width, container!.frame.size.height / 2)
+            let secondSnapshotViewFrameStart = isHorizontal ? CGRectMake(container!.frame.size.width / 2, 0.0, container!.frame.size.width / 2, container!.frame.size.height) : CGRectMake(0.0, container!.frame.size.height / 2, container!.frame.size.width, container!.frame.size.height / 2)
+            let secondSnapshotViewFrameEnd = isHorizontal ? CGRectMake(container!.frame.size.width, 0.0, container!.frame.size.width / 2, container!.frame.size.height) : CGRectMake(0.0, container!.frame.size.height, container!.frame.size.width, container!.frame.size.height / 2)
+            
+            firstSnapshotView.frame = isPositiveAnimation ? firstSnapshotViewFrameStart : firstSnapshotViewFrameEnd
+            secondSnapshotView.frame = isPositiveAnimation ? secondSnapshotViewFrameStart : secondSnapshotViewFrameEnd
             
             let viewToFade = isPositiveAnimation ? toView! : fromView!
             let fadeView = UIView.init(frame: viewToFade.bounds)
@@ -69,20 +63,20 @@ public class CurtainAnimationController: NSObject, UIViewControllerAnimatedTrans
             if isPositiveAnimation {
                 container!.addSubview(toView!)
             }
-            container!.addSubview(topSnapshotView)
-            container!.addSubview(bottomSnapshotView)
+            container!.addSubview(firstSnapshotView)
+            container!.addSubview(secondSnapshotView)
             
             UIView.animateWithDuration(kTransitionDuration, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
                 fadeView.alpha = endAlpha
-                topSnapshotView.frame = CGRectOffset(topSnapshotView.frame, 0, topYEnd - topYStart)
-                bottomSnapshotView.frame = CGRectOffset(bottomSnapshotView.frame, 0, bottomYEnd - bottomYStart)
+                firstSnapshotView.frame = self.isPositiveAnimation ? firstSnapshotViewFrameEnd : firstSnapshotViewFrameStart
+                secondSnapshotView.frame = self.isPositiveAnimation ? secondSnapshotViewFrameEnd : secondSnapshotViewFrameStart
                 }, completion: { (finished) in
                     if !self.isPositiveAnimation {
                         container!.addSubview(toView!)
                     }
                     fadeView.removeFromSuperview()
-                    topSnapshotView.removeFromSuperview()
-                    bottomSnapshotView.removeFromSuperview()
+                    firstSnapshotView.removeFromSuperview()
+                    secondSnapshotView.removeFromSuperview()
                     
                     let success = !transitionContext.transitionWasCancelled()
                     

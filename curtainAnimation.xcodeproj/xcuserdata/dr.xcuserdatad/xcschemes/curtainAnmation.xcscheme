@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AC6C29941D5A2A580042BC41"
-               BuildableName = "curtainTest.app"
-               BlueprintName = "curtainTest"
-               ReferencedContainer = "container:curtainTest.xcodeproj">
+               BuildableName = "curtainAnimation.app"
+               BlueprintName = "curtainAnimation"
+               ReferencedContainer = "container:curtainAnimation.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AC6C29941D5A2A580042BC41"
-            BuildableName = "curtainTest.app"
-            BlueprintName = "curtainTest"
-            ReferencedContainer = "container:curtainTest.xcodeproj">
+            BuildableName = "curtainAnimation.app"
+            BlueprintName = "curtainAnimation"
+            ReferencedContainer = "container:curtainAnimation.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AC6C29941D5A2A580042BC41"
-            BuildableName = "curtainTest.app"
-            BlueprintName = "curtainTest"
-            ReferencedContainer = "container:curtainTest.xcodeproj">
+            BuildableName = "curtainAnimation.app"
+            BlueprintName = "curtainAnimation"
+            ReferencedContainer = "container:curtainAnimation.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AC6C29941D5A2A580042BC41"
-            BuildableName = "curtainTest.app"
-            BlueprintName = "curtainTest"
-            ReferencedContainer = "container:curtainTest.xcodeproj">
+            BuildableName = "curtainAnimation.app"
+            BlueprintName = "curtainAnimation"
+            ReferencedContainer = "container:curtainAnimation.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
