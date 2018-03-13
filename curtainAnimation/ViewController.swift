@@ -10,36 +10,36 @@ import UIKit
 
 class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     
-    private var isHorizontally = true
+    fileprivate var isHorizontally = true
 
-    @IBAction func presentHorizAction(sender: UIButton) {
+    @IBAction func presentHorizAction(_ sender: UIButton) {
         isHorizontally = true
         presentVC()
     }
     
-    @IBAction func presentVerAction(sender: UIButton) {
+    @IBAction func presentVerAction(_ sender: UIButton) {
         isHorizontally = false
         presentVC()
     }
     
     func presentVC() {
-        let vc = storyboard?.instantiateViewControllerWithIdentifier("ViewControllerToPresent")
+        let vc = storyboard?.instantiateViewController(withIdentifier: "ViewControllerToPresent")
         vc!.transitioningDelegate = self
-        self.presentViewController(vc!, animated: true) {
+        self.present(vc!, animated: true) {
             
         }
     }
     
     //MARK: UIViewControllerTransitioningDelegate
-    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        let presentAnimCtr = CurtainAnimationController.init()
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        let presentAnimCtr = CurtainAnimationController()
         presentAnimCtr.isPositiveAnimation = true
         presentAnimCtr.isHorizontal = isHorizontally
         return presentAnimCtr
     }
     
-    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        let presentAnimCtr = CurtainAnimationController.init()
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        let presentAnimCtr = CurtainAnimationController()
         presentAnimCtr.isPositiveAnimation = false
         presentAnimCtr.isHorizontal = isHorizontally
         return presentAnimCtr

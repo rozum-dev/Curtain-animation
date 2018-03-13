@@ -10,8 +10,8 @@ import UIKit
 
 class ViewControllerToPresent: UIViewController {
     
-    @IBAction func dismissButtonAction(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func dismissButtonAction(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
     }
 
 }
